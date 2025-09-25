@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Piscina" data-en="Royal Palm Sampaka Social Club - Pool" data-fr="Club Social Royal Palm Sampaka - Piscine">Club Social Royal Palm Sampaka - Piscina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --pool-primary: #ffffff;
+            --pool-accent: #00CED1;
+            --pool-secondary: #f0f8ff;
+            --pool-text: #333333;
+            --pool-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: linear-gradient(135deg, var(--pool-primary), var(--pool-secondary));
+            color: var(--pool-text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .pool-header {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imagenes/piscina-bg.jpg') no-repeat center center/cover;
+            padding: 60px;
+            text-align: center;
+            color: var(--pool-accent);
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--pool-shadow);
+        }
+        .pool-header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+        .pool-header p {
+            font-size: 1.4em;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        .photo-gallery, .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--pool-secondary);
+            border-radius: 10px;
+            box-shadow: var(--pool-shadow);
+        }
+        .photo-gallery h2, .service-grid h4 {
+            color: var(--pool-accent);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .photo-gallery img, .service-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .service-item h4 {
+            margin: 10px 0;
+        }
+        .service-item p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pool-header">
+            <h1 data-es="Piscina" data-en="Pool" data-fr="Piscine">Piscina</h1>
+            <p data-es="Disfruta de nuestra piscina de lujo." data-en="Enjoy our luxury pool." data-fr="Profitez de notre piscine de luxe.">Disfruta de nuestra piscina de lujo.</p>
+        </section>
+        <section class="photo-gallery animate__animated animate__fadeInUp">
+            <h2 data-es="Galería" data-en="Gallery" data-fr="Galerie">Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="imagenes/piscina1.png" alt="Piscina Principal" data-alt-es="Piscina Principal" data-alt-en="Main Pool" data-alt-fr="Piscine Principale">
+                    <p data-es="Piscina Principal" data-en="Main Pool" data-fr="Piscine Principale">Piscina Principal</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/piscina2.png" alt="Zona de Relax" data-alt-es="Zona de Relax" data-alt-en="Relax Zone" data-alt-fr="Zone de Détente">
+                    <p data-es="Zona de Relax" data-en="Relax Zone" data-fr="Zone de Détente">Zona de Relax</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/niños2.png" alt="Piscina Infantil" data-alt-es="Piscina Infantil" data-alt-en="Kids Pool" data-alt-fr="Piscine pour Enfants">
+                    <p data-es="Piscina Infantil" data-en="Kids Pool" data-fr="Piscine pour Enfants">Piscina Infantil</p>
+                </div>
+            </div>
+        </section>
+        <section class="service-grid animate__animated animate__fadeInUp">
+            <div class="service-item">
+                <img src="imagenes/niños3.png" alt="Selva Inchable" data-alt-es="Selva Inchable" data-alt-en="Sunbeds" data-alt-fr="Chaises Longues">
+                <h4 data-es="Selva Inchable" data-en="Sunbeds" data-fr="Chaises Longues">Selva Inchable</h4>
+                <p data-es="Cómodas tumbonas para relajarte al sol." data-en="Comfortable sunbeds to relax under the sun." data-fr="Chaises longues confortables pour se détendre au soleil.">Cómodas tumbonas para relajarte al sol.</p>
+            </div>
+            <div class="service-item">
+                <img src="imagenes/niños1.png" alt="Pezcado Gigante" data-alt-es="Pezcado Gigante" data-alt-en="Pool Bar" data-alt-fr="Bar de Piscine">
+                <h4 data-es="Pezcado Gigante" data-en="Pool Bar" data-fr="Bar de Piscine">Pezcado Gigante</h4>
+                <p data-es="Refrescos y cócteles junto a la piscina." data-en="Refreshments and cocktails by the pool." data-fr="Rafraîchissements et cocktails au bord de la piscine.">Refrescos y cócteles junto a la piscina.</p>
+            </div>
+            <div class="service-item">
+                <img src="imagenes/actividad1.jpg" alt="Clases de Natación" data-alt-es="Clases de Natación" data-alt-en="Swimming Lessons" data-alt-fr="Cours de Natation">
+                <h4 data-es="Clases de Natación" data-en="Swimming Lessons" data-fr="Cours de Natation">Clases de Natación</h4>
+                <p data-es="Clases para niños y adultos." data-en="Lessons for kids and adults." data-fr="Cours pour enfants et adultes.">Clases para niños y adultos.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
+                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
+            </p>
+            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

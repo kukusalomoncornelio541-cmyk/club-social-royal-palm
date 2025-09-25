@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Área para Socios" data-en="Royal Palm Sampaka Social Club - Members Area" data-fr="Club Social Royal Palm Sampaka - Espace Membres">Club Social Royal Palm Sampaka - Área para Socios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --primary: linear-gradient(135deg, #ffffff, #f8f9fa);
+            --accent: #1a3c34;
+            --secondary: #f5f5f5;
+            --text: #333;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: var(--primary);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .content-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .content-section h1, .content-section h2 {
+            color: var(--accent);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+        .content-section h2 {
+            font-size: 1.8em;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .benefit-card {
+            background: var(--secondary);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .benefit-card h3 {
+            color: var(--accent);
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .benefit-card p {
+            font-size: 1em;
+        }
+        .membership-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .membership-form input,
+        .membership-form select,
+        .membership-form textarea {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .membership-form button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .success-message, .error-message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content-section animate__animated animate__fadeInUp">
+            <h1 data-es="Área para Socios" data-en="Members Area" data-fr="Espace Membres">Área para Socios</h1>
+            <p data-es="Únete a nuestra comunidad exclusiva y disfruta de beneficios únicos." data-en="Join our exclusive community and enjoy unique benefits." data-fr="Rejoignez notre communauté exclusive et profitez d'avantages uniques.">Únete a nuestra comunidad exclusiva y disfruta de beneficios únicos.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3 data-es="Acceso Ilimitado" data-en="Unlimited Access" data-fr="Accès Illimité">Acceso Ilimitado</h3>
+                    <p data-es="Accede a todas las instalaciones en cualquier momento." data-en="Access all facilities at any time." data-fr="Accédez à toutes les installations à tout moment.">Accede a todas las instalaciones en cualquier momento.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 data-es="Descuentos Exclusivos" data-en="Exclusive Discounts" data-fr="Réductions Exclusives">Descuentos Exclusivos</h3>
+                    <p data-es="Obtén descuentos en eventos y servicios." data-en="Get discounts on events and services." data-fr="Obtenez des réductions sur les événements et services.">Obtén descuentos en eventos y servicios.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3 data-es="Prioridad en Reservas" data-en="Priority Reservations" data-fr="Priorité aux Réservations">Prioridad en Reservas</h3>
+                    <p data-es="Reserva instalaciones con prioridad." data-en="Reserve facilities with priority." data-fr="Réservez les installations en priorité.">Reserva instalaciones con prioridad.</p>
+                </div>
+            </div>
+            <h2 data-es="Solicita tu Membresía" data-en="Apply for Membership" data-fr="Demander l'Adhésion">Solicita tu Membresía</h2>
+            <form id="membershipForm" class="membership-form" action="submit_membership.html" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required data-es="Nombre" data-en="Name" data-fr="Nom">
+                <input type="email" name="email" placeholder="Correo Electrónico" required data-es="Correo Electrónico" data-en="Email" data-fr="Email">
+                <select name="membership_type" required data-es="Tipo de Membresía" data-en="Membership Type" data-fr="Type d'Adhésion">
+                    <option value="" disabled selected data-es="Selecciona" data-en="Select" data-fr="Sélectionnez">Selecciona</option>
+                    <option value="individual" data-es="Individual" data-en="Individual" data-fr="Individuel">Individual</option>
+                    <option value="family" data-es="Familiar" data-en="Family" data-fr="Familial">Familiar</option>
+                </select>
+                <textarea name="comments" placeholder="Comentarios" rows="5" data-es="Comentarios" data-en="Comments" data-fr="Commentaires"></textarea>
+                <button type="submit" data-es="Enviar Solicitud" data-en="Send Application" data-fr="Envoyer la Demande">Enviar Solicitud</button>
+            </form>
+            <p id="confirmationMessage" class="success-message" style="display: none;" data-es="¡Solicitud enviada con éxito!" data-en="Application sent successfully!" data-fr="Demande envoyée avec succès !">¡Solicitud enviada con éxito!</p>
+            <p id="errorMessage" class="error-message" style="display: none;">Error al enviar la solicitud.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
+                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
+            </p>
+            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('membershipForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            try {
+                const response = await fetch('api/membresias.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                const confirmationMessage = document.getElementById('confirmationMessage');
+                const errorMessage = document.getElementById('errorMessage');
+                if (result.status === 'success') {
+                    confirmationMessage.style.display = 'block';
+                    errorMessage.style.display = 'none';
+                    e.target.reset();
+                } else {
+                    confirmationMessage.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = result.message || 'Error al enviar la solicitud. Por favor, intenta de nuevo.';
+                }
+            } catch (error) {
+                document.getElementById('confirmationMessage').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorMessage').textContent = 'Error al enviar la solicitud: ' + error.message;
+            }
+        });
+    </script>
+</body>
+</html>

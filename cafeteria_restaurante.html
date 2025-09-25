@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Cafetería y Restaurante" data-en="Royal Palm Sampaka Social Club - Cafeteria and Restaurant" data-fr="Club Social Royal Palm Sampaka - Cafétéria et Restaurant">Club Social Royal Palm Sampaka - Cafetería y Restaurante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --cafe-primary: linear-gradient(135deg, #8a7256ff, #f8f9fa);
+            --cafe-accent: #523109ff;
+            --cafe-secondary: #f5f5f5;
+            --cafe-text: #000000ff;
+            --cafe-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: var(--cafe-primary);
+            color: var(--cafe-text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .welcome-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('imagenes/caafeteria.png') no-repeat center center/cover;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .welcome-section h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease;
+        }
+        .welcome-section p {
+            font-size: 1.4em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .menu-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--cafe-secondary);
+            border-radius: 10px;
+            box-shadow: var(--cafe-shadow);
+        }
+        .menu-section h2 {
+            color: var(--cafe-accent);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .menu-item h4 {
+            margin: 10px 0;
+            color: var(--cafe-accent);
+        }
+        .menu-item .description {
+            font-size: 0.9em;
+        }
+        .menu-item .price {
+            font-weight: bold;
+            color: var(--cafe-text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h1 data-es="Cafetería y Restaurante" data-en="Cafeteria and Restaurant" data-fr="Cafétéria et Restaurant">Cafetería y Restaurante</h1>
+            <p data-es="Saborea nuestra selección de platos y bebidas." data-en="Savor our selection of dishes and drinks." data-fr="Dégustez notre sélection de plats et de boissons.">Saborea nuestra selección de platos y bebidas.</p>
+        </section>
+        <section class="menu-section animate__animated animate__fadeInUp">
+            <h2 data-es="Nuestra Carta" data-en="Our Menu" data-fr="Notre Menu">Nuestra Carta</h2>
+            <div id="menusContainer">
+                <!-- Placeholder for static menu content -->
+                <div class="menu-category animate__animated animate__fadeInUp">
+                    <h2 data-es="Entrantes" data-en="Starters" data-fr="Entrées">Entrantes</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="imagenes/promocion.png" alt="Plato de ejemplo">
+                            <h4>Plato de ejemplo</h4>
+                            <p class="description">Descripción del plato.</p>
+                            <p class="price">5000 CFA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category animate__animated animate__fadeInUp">
+                    <h2 data-es="Platos Principales" data-en="Main Courses" data-fr="Plats Principaux">Platos Principales</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="imagenes/promocion.png" alt="Plato principal">
+                            <h4>Plato principal</h4>
+                            <p class="description">Descripción del plato principal.</p>
+                            <p class="price">10000 CFA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
+                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
+            </p>
+            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

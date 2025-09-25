@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Novedades" data-en="Royal Palm Sampaka Social Club - News" data-fr="Club Social Royal Palm Sampaka - Nouvelles">Club Social Royal Palm Sampaka - Novedades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --primary: linear-gradient(135deg, #ffffff, #f8f9fa);
+            --accent: #1a3c34;
+            --secondary: #f5f5f5;
+            --text: #333;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: var(--primary);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .news-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .news-section h1 {
+            color: var(--accent);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .news-item {
+            background: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-item h3 {
+            font-size: 1.5em;
+            margin: 15px;
+            color: var(--accent);
+        }
+        .news-item .date {
+            font-size: 1em;
+            margin: 0 15px;
+            color: #666;
+        }
+        .news-item p {
+            margin: 0 15px 15px;
+            font-size: 1em;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filter-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .filter-btn.active {
+            background: #0f2a24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="news-section animate__animated animate__fadeInUp">
+            <h1 data-es="Novedades" data-en="News" data-fr="Nouvelles">Novedades</h1>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="loadNews('')">Todos</button>
+                <button class="filter-btn" onclick="loadNews('eventos')">Eventos</button>
+                <button class="filter-btn" onclick="loadNews('instalaciones')">Instalaciones</button>
+                <button class="filter-btn" onclick="loadNews('socios')">Socios</button>
+            </div>
+            <div id="novedades" class="news-grid">
+                <!-- Placeholder for static news content -->
+                <div class="news-item">
+                    <img src="imagenes/novedad1.jpg" alt="Novedad de ejemplo">
+                    <h3>Novedad de ejemplo</h3>
+                    <p class="date">Fecha: 2025-09-20</p>
+                    <p>Descripción de la novedad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
+                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
+            </p>
+            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+async function loadNews(category = '') {
+    try {
+        const response = await fetch(`api/novedades.php?category=${category}`);
+        const result = await response.json();
+        const container = document.getElementById('novedades');
+        container.innerHTML = '';
+        if (result.success) {
+            result.data.forEach(news => {
+                const item = document.createElement('div');
+                item.className = 'news-item';
+                item.innerHTML = `
+                    <img src="${news.imagen || 'imagenes/novedad1.jpg'}" alt="${news.titulo}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2NjYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>${news.titulo}</h3>
+                    <p class="date">${news.fecha || 'Sin fecha'}</p>
+                    <p>${(news.descripcion || 'Sin descripción').substring(0, 100)}${news.descripcion && news.descripcion.length > 100 ? '...' : ''}</p>
+                `;
+                container.appendChild(item);
+            });
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.filter-btn[onclick="loadNews('${category}')"]`)?.classList.add('active') || document.querySelector('.filter-btn[onclick="loadNews(\'\')"]').classList.add('active');
+        } else {
+            console.error('API error:', result.error);
+            const lang = localStorage.getItem('language') || 'es';
+            const message = {
+                es: `Error al cargar novedades: ${result.error}`,
+                en: `Error loading news: ${result.error}`,
+                fr: `Erreur lors du chargement des nouvelles : ${result.error}`
+            }[lang];
+            container.innerHTML = `<p class="error-message">${message}</p>`;
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+        const lang = localStorage.getItem('language') || 'es';
+        const message = {
+            es: `Error al cargar novedades: ${error.message}`,
+            en: `Error loading news: ${error.message}`,
+            fr: `Erreur lors du chargement des nouvelles : ${error.message}`
+        }[lang];
+        document.getElementById('novedades').innerHTML = `<p class="error-message">${message}</p>`;
+    }
+}
+// Cargar noticias al iniciar
+document.addEventListener('DOMContentLoaded', () => loadNews());
+</script>
+</body>
+</html>

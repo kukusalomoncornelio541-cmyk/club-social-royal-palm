@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Sobre Nosotros" data-en="Royal Palm Sampaka Social Club - About Us" data-fr="Club Social Royal Palm Sampaka - À Propos">Club Social Royal Palm Sampaka - Sobre Nosotros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --primary: linear-gradient(135deg, #ffffff, #f8f9fa);
+            --accent: #1a3c34;
+            --secondary: #f5f5f5;
+            --text: #333;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: var(--primary);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .about-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .about-section h1 {
+            color: var(--accent);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+        .about-content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .about-content img {
+            width: 50%;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .about-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .values-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .value-card {
+            background: var(--secondary);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .value-card h3 {
+            color: var(--accent);
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .value-card p {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section animate__animated animate__fadeInUp">
+            <h1 data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</h1>
+            <div class="about-content">
+                <img src="imagenes/about-image.jpg" alt="Sobre Nosotros">
+                <p data-es="El Club Social Royal Palm Sampaka es un espacio exclusivo diseñado para ofrecer experiencias únicas a nuestros socios y visitantes. Fundado con la visión de crear un lugar donde la comunidad pueda reunirse, relajarse y disfrutar de instalaciones de primera clase, nuestro club combina lujo, confort y hospitalidad." data-en="The Royal Palm Sampaka Social Club is an exclusive space designed to offer unique experiences to our members and visitors. Founded with the vision of creating a place where the community can gather, relax, and enjoy top-notch facilities, our club combines luxury, comfort, and hospitality." data-fr="Le Club Social Royal Palm Sampaka est un espace exclusif conçu pour offrir des expériences uniques à nos membres et visiteurs. Fondé avec la vision de créer un lieu où la communauté peut se réunir, se détendre et profiter d'installations de premier ordre, notre club allie luxe, confort et hospitalité.">El Club Social Royal Palm Sampaka es un espacio exclusivo diseñado para ofrecer experiencias únicas a nuestros socios y visitantes. Fundado con la visión de crear un lugar donde la comunidad pueda reunirse, relajarse y disfrutar de instalaciones de primera clase, nuestro club combina lujo, confort y hospitalidad.</p>
+            </div>
+            <div class="values-section">
+                <div class="value-card">
+                    <h3 data-es="Excelencia" data-en="Excellence" data-fr="Excellence">Excelencia</h3>
+                    <p data-es="Compromiso con la calidad en cada detalle." data-en="Commitment to quality in every detail." data-fr="Engagement envers la qualité dans chaque détail.">Compromiso con la calidad en cada detalle.</p>
+                </div>
+                <div class="value-card">
+                    <h3 data-es="Comunidad" data-en="Community" data-fr="Communauté">Comunidad</h3>
+                    <p data-es="Fomentamos conexiones significativas." data-en="We foster meaningful connections." data-fr="Nous favorisons des connexions significatives.">Fomentamos conexiones significativas.</p>
+                </div>
+                <div class="value-card">
+                    <h3 data-es="Sostenibilidad" data-en="Sustainability" data-fr="Durabilité">Sostenibilidad</h3>
+                    <p data-es="Cuidamos nuestro entorno." data-en="We care for our environment." data-fr="Nous prenons soin de notre environnement.">Cuidamos nuestro entorno.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
+                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
+            </p>
+            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

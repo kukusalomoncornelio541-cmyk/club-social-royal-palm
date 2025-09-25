@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Heladería" data-en="Royal Palm Sampaka Social Club - Ice Cream Parlor" data-fr="Club Social Royal Palm Sampaka - Glacier">Club Social Royal Palm Sampaka - Heladería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --ice-primary: linear-gradient(135deg, #FFD1DC, #B5EAD7);
+            --ice-accent: #F3E5AB;
+            --ice-secondary: #ffffff;
+            --ice-text: #333333;
+            --ice-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: var(--ice-primary);
+            color: var(--ice-text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .logo-top {
+            text-align: center;
+            padding: 20px;
+        }
+        .logo-top img {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .ice-section {
+            background: var(--ice-secondary);
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: var(--ice-shadow);
+        }
+        .ice-section h1 {
+            color: var(--ice-accent);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+        .ice-section p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-item h4 {
+            margin: 10px 0;
+            color: var(--ice-accent);
+        }
+        .product-item .description {
+            font-size: 0.9em;
+        }
+        .product-item .price {
+            font-weight: bold;
+            color: var(--ice-text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="logo-top">
+            <img src="imagenes/heladeria-logo.png" alt="Heladería Logo">
+        </div>
+        <section class="ice-section animate__animated animate__fadeInUp">
+            <h1 data-es="Heladería" data-en="Ice Cream Parlor" data-fr="Glacier">Heladería</h1>
+            <p data-es="Disfruta de nuestros deliciosos helados." data-en="Enjoy our delicious ice creams." data-fr="Dégustez nos délicieuses glaces.">

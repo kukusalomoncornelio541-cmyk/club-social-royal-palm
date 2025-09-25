@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Sala de Juegos" data-en="Royal Palm Sampaka Social Club - Game Room" data-fr="Club Social Royal Palm Sampaka - Salle de Jeux">Club Social Royal Palm Sampaka - Sala de Juegos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --game-primary: #2E2E2E;
+            --game-accent: #A8DADC;
+            --game-secondary: #457B9D;
+            --game-text: #FFFFFF;
+            --game-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            background: linear-gradient(135deg, var(--game-primary), var(--game-secondary));
+            color: var(--game-text);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+        .club-logo {
+            text-align: center;
+            padding: 20px;
+            background: var(--game-secondary);
+        }
+        .club-logo img {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            animation: bounce 2s infinite;
+        }
+        .boutique-logo {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .boutique-logo img {
+            max-width: 150px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .game-header {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e') no-repeat center center/cover;
+            padding: 60px;
+            text-align: center;
+            color: var(--game-accent);
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--game-shadow);
+        }
+        .game-header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+        .game-header p {
+            font-size: 1.4em;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        .game-form {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--game-secondary);
+            border-radius: 10px;
+            box-shadow: var(--game-shadow);
+        }
+        .game-form h2 {
+            color: var(--game-accent);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .game-form form {
+            display: grid;
+            gap: 15px;
+        }
+        .game-form input, .game-form select, .game-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .game-form button {
+            background: var(--game-accent);
+            color: var(--game-text);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .game-schedule {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--game-secondary);
+            border-radius: 10px;
+            box-shadow: var(--game-shadow);
+        }
+        .game-schedule h2 {
+            color: var(--game-accent);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .schedule-item {
+            background: var(--game-primary);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .schedule-item h3 {
+            color: var(--game-accent);
+            margin-bottom: 10px;
+        }
+        .schedule-item p {
+            font-size: 0.9em;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery-item .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1em;
+            color: var(--game-text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="club-logo">
+            <img src="imagenes/club-logo.png" alt="Club Logo">
+        </div>
+        <div class="boutique-logo">
+            <img src="imagenes/game-logo.png" alt="Game Logo">
+        </div>
+        <section class="game-header">
+            <h1 data-es="Sala de Juegos" data-en="Game Room" data-fr="Salle de Jeux">Sala de Juegos</h1>
+            <p data-es="Diviértete en nuestra sala de juegos." data-en="Have fun in our game room." data-fr="Amusez-vous dans notre salle de jeux.">Diviértete en nuestra sala de juegos.</p>
+        </section>
+        <section class="game-form animate__animated animate__fadeInUp">
+            <h2 data-es="Reserva una Sesión" data-en="Book a Session" data-fr="Réserver une Session">Reserva una Sesión</h2>
+            <form action="submit_game.html" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required data-es="Nombre" data-en="Name" data-fr="Nom">
+                <input type="email" name="email" placeholder="Correo Electrónico" required data-es="Correo Electrónico" data-en="Email" data-fr="Email">
+                <select name="game_type" required data-es="Tipo de Juego" data-en="Game Type" data-fr="Type de Jeu">
+                    <option value="" disabled selected data-es="Selecciona" data-en="Select" data-fr="Sélectionnez">Selecciona</option>
+                    <option value="board" data-es="Juegos de Mesa" data-en="Board Games" data-fr="Jeux de Société">Juegos de Mesa</option>
+                    <option value="electronic" data-es="Juegos Electrónicos" data-en="Electronic Games" data-fr="Jeux Électroniques">Juegos Electrónicos</option>
+                    <option value="pingpong" data-es="Ping-Pong" data-en="Ping-Pong" data-fr="Ping-Pong">Ping-Pong</option>
+                    <option value="billiards" data-es="Billar" data-en="Billiards" data-fr="Billard">Billar</option>
+                </select>
+                <input type="date" name="date" required data-es="Fecha" data-en="Date" data-fr="Date">
+                <textarea name="comments" placeholder="Comentarios" rows="5" data-es="Comentarios" data-en="Comments" data-fr="Commentaires"></textarea>
+                <button type="submit" data-es="Enviar Solicitud" data-en="Send Request" data-fr="Envoyer la Demande">Enviar Solicitud</button>
+            </form>
+        </section>
+        <section class="game-schedule animate__animated animate__fadeInUp">
+            <h2 data-es="Horario de Disponibilidad" data-en="Availability Schedule" data-fr="Horaire de Disponibilité">Horario de Disponibilidad</h2>
+            <div class="schedule-grid">
+                <div class="schedule-item">
+                    <h3 data-es="Lunes a Viernes" data-en="Monday to Friday" data-fr="Lundi à Vendredi">Lunes a Viernes</h3>
+                    <p data-es="10:00 - 22:00" data-en="10:00 AM - 10:00 PM" data-fr="10h00 - 22h00">10:00 - 22:00</p>
+                </div>
+                <div class="schedule-item">
+                    <h3 data-es="Sábados y Domingos" data-en="Saturdays and Sundays" data-fr="Samedis et Dimanches">Sábados y Domingos</h3>
+                    <p data-es="12:00 - 20:00" data-en="12:00 PM - 8:00 PM" data-fr="12h00 - 20h00">12:00 - 20:00</p>
+                </div>
+            </div>
+        </section>
+        <section class="game-gallery animate__animated animate__fadeInUp">
+            <h2 data-es="Galería" data-en="Gallery" data-fr="Galerie">Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" alt="Juegos Electrónicos" data-alt-es="Juegos Electrónicos" data-alt-en="Electronic Games" data-alt-fr="Jeux Électroniques">
+                    <div class="caption" data-es="Juegos Electrónicos" data-en="Electronic Games" data-fr="Jeux Électroniques">Juegos Electrónicos</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594058574066-08d7769e6dc7" alt="Juegos de Mesa" data-alt-es="Juegos de Mesa" data-alt-en="Board Games" data-alt-fr="Jeux de Société">
+                    <div class="caption" data-es="Juegos de Mesa" data-en="Board Games" data-fr="Jeux de Société">Juegos de Mesa</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155" alt="Ping-Pong" data-alt-es="Ping-Pong" data-alt-en="Ping-Pong" data-alt-fr="Ping-Pong">
+                    <div class="caption" data-es="Ping-Pong" data-en="Ping-Pong" data-fr="Ping-Pong">Ping-Pong</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1549498682-3d7e3e2f37c7" alt="Billar" data-alt-es="Billar" data-alt-en="Billiards" data-alt-fr="Billard">
+                    <div class="caption" data-es="Billar" data-en="Billiards" data-fr="Billard">Billar</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
+                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
+            </p>
+            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

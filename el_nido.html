@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - El Nido" data-en="Royal Palm Sampaka Social Club - The Nest" data-fr="Club Social Royal Palm Sampaka - Le Nid">Club Social Royal Palm Sampaka - El Nido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --nido-primary: #ffffffff;
+            --nido-accent: #523200ff;
+            --nido-secondary: #fffefbff;
+            --nido-text: #0a0909ff;
+            --nido-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background: linear-gradient(135deg, var(--nido-primary), var(--nido-secondary));
+            color: var(--nido-text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .club-logo {
+            text-align: center;
+            padding: 20px;
+            background: var(--nido-primary);
+        }
+        .club-logo img {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            animation: bounce 2s infinite;
+        }
+        .boutique-logo {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .boutique-logo img {
+            max-width: 150px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .nido-header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f') no-repeat center center/cover;
+            padding: 60px;
+            text-align: center;
+            color: var(--nido-secondary);
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--nido-shadow);
+        }
+        .nido-header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+        .nido-header p {
+            font-size: 1.4em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .nido-form, .nido-gallery {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--nido-secondary);
+            border-radius: 10px;
+            box-shadow: var(--nido-shadow);
+        }
+        .nido-form h2, .nido-gallery h2 {
+            color: var(--nido-accent);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nido-form form {
+            display: grid;
+            gap: 15px;
+        }
+        .nido-form input, .nido-form select, .nido-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .nido-form button {
+            background: var(--nido-accent);
+            color: var(--nido-secondary);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery-item .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1em;
+            color: var(--nido-text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="club-logo">
+            <img src="imagenes/club-logo.png" alt="Club Logo">
+        </div>
+        <div class="boutique-logo">
+            <img src="imagenes/nido-logo.png" alt="El Nido Logo">
+        </div>
+        <section class="nido-header">
+            <h1 data-es="El Nido" data-en="The Nest" data-fr="Le Nid">El Nido</h1>
+            <p data-es="Un espacio dedicado para los más pequeños." data-en="A dedicated space for the little ones." data-fr="Un espace dédié aux plus petits.">Un espacio dedicado para los más pequeños.</p>
+        </section>
+        <section class="nido-form animate__animated animate__fadeInUp">
+            <h2 data-es="Inscribe a tu hijo" data-en="Enroll Your Child" data-fr="Inscrivez Votre Enfant">Inscribe a tu hijo</h2>
+            <form action="submit_nido.html" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required data-es="Nombre" data-en="Name" data-fr="Nom">
+                <input type="email" name="email" placeholder="Correo Electrónico" required data-es="Correo Electrónico" data-en="Email" data-fr="Email">
+                <input type="number" name="age" placeholder="Edad" required data-es="Edad" data-en="Age" data-fr="Âge">
+                <select name="program" required data-es="Programa"

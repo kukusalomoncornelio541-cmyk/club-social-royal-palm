@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Club Social Royal Palm Sampaka - Gimnasio" data-en="Royal Palm Sampaka Social Club - Gym" data-fr="Club Social Royal Palm Sampaka - Gymnase">Club Social Royal Palm Sampaka - Gimnasio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+    <style>
+        :root {
+            --gym-primary: #1A1A1A;
+            --gym-accent: #00FFCC;
+            --gym-secondary: #0033A0;
+            --gym-text: #FFFFFF;
+            --gym-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        body {
+            background: var(--gym-primary);
+            color: var(--gym-text);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+        .club-logo {
+            text-align: center;
+            padding: 20px;
+            background: var(--gym-secondary);
+        }
+        .club-logo img {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            animation: bounce 2s infinite;
+        }
+        .boutique-logo {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .boutique-logo img {
+            max-width: 150px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .gym-header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48') no-repeat center center/cover;
+            padding: 60px;
+            text-align: center;
+            color: var(--gym-accent);
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--gym-shadow);
+        }
+        .gym-header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+        .gym-header p {
+            font-size: 1.4em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .gym-form, .gym-gallery {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--gym-secondary);
+            border-radius: 10px;
+            box-shadow: var(--gym-shadow);
+        }
+        .gym-form h2, .gym-gallery h2 {
+            color: var(--gym-accent);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .gym-form form {
+            display: grid;
+            gap: 15px;
+        }
+        .gym-form input, .gym-form select, .gym-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .gym-form button {
+            background: var(--gym-accent);
+            color: var(--gym-text);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery-item .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1em;
+            color: var(--gym-text);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
+                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
+                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
+                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="club-logo">
+            <img src="imagenes/club-logo.png" alt="Club Logo">
+        </div>
+        <div class="boutique-logo">
+            <img src="imagenes/gym-logo.png" alt="Gym Logo">
+        </div>
+        <section class="gym-header">
+            <h1 data-es="Gimnasio" data-en="Gym" data-fr="Gymnase">Gimnasio</h1>
+            <p data-es="Entrena con los mejores equipos." data-en="Train with the best equipment." data-fr="Entraînez-vous avec le meilleur équipement.">Entrena con los mejores equipos.</p>
+        </section>
+        <section class="gym-form animate__animated animate__fadeInUp">
+            <h2 data-es="Únete al Gimnasio" data-en="Join the Gym" data-fr="Rejoignez la Salle de Sport">Únete al Gimnasio</h2>
+            <form action="submit_gym.html" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required data-es="Nombre" data-en="Name" data-fr="Nom">
+                <input type="email" name="email" placeholder="Correo Electrónico" required data-es="Correo Electrónico" data-en="Email" data-fr="Email">
+                <select name="membership" required data-es="Tipo de Membresía" data-en="Membership Type" data-fr="Type d'Abonnement">
+                    <option value="" disabled selected data-es="Selecciona" data-en="Select" data-fr="Sélectionnez">Selecciona</option>
+                    <option value="monthly" data-es="Mensual" data-en="Monthly" data-fr="Mensuel">Mensual</option>
+                    <option value="annual" data-es="Anual" data-en="Annual" data-fr="Annuel">Anual</option>
+                </select>
+                <textarea name="comments" placeholder="Comentarios" rows="5" data-es="Comentarios" data-en="Comments" data-fr="Commentaires"></textarea>
+                <button type="submit" data-es="Enviar Solicitud" data-en="Submit Application" data-fr="Soumettre la Demande">Enviar Solicitud</button>
+            </form>
+        </section>
+        <section class="gym-gallery animate__animated animate__fadeInUp">
+            <h2 data-es="Galería" data-en="Gallery" data-fr="Galerie">Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="imagenes/gimnasio1.png" alt="Gimnasio" data-alt-es="Gimnasio" data-alt-en="Gym" data-alt-fr="Gymnase">
+                    <div class="caption" data-es="Gimnasio" data-en="Gym" data-fr="Gymnase">Gimnasio</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/gym4.png" alt="Clase de Yoga" data-alt-es="Clase de Yoga" data-alt-en="Yoga Class" data-alt-fr="Cours de Yoga">
+                    <div class="caption" data-es="Clase de Yoga" data-en="Yoga Class" data-fr="Cours de Yoga">Clase de Yoga</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
+            <p class="social-links">
+                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
+                <a href="https://www.instagram.com/roy
