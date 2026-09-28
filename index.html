@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -76,131 +77,140 @@
         }
         .feature-card {
             background: var(--secondary);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .feature-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
         .feature-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
         .feature-card h3 {
-            font-size: 1.5em;
-            margin: 15px;
             color: var(--accent);
+            margin-bottom: 10px;
         }
-        .feature-card p {
-            margin: 0 15px 15px;
-            font-size: 1em;
+        .cta-button {
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5em;
+            }
+            .hero-section p {
+                font-size: 1.2em;
+            }
+            .audio-player {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Placeholder for header content (originally from includes/header.php) -->
-        <nav>
-            <ul>
-                <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
-                <li><a href="sobre-nosotros.html" data-es="Sobre Nosotros" data-en="About Us" data-fr="À Propos">Sobre Nosotros</a></li>
-                <li><a href="instalaciones.html" data-es="Instalaciones" data-en="Facilities" data-fr="Installations">Instalaciones</a></li>
-                <li><a href="eventos.html" data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</a></li>
-                <li><a href="contacto.html" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero-section">
-            <video id="heroVideo" autoplay muted loop>
-                <source src="videos/hero-video.mp4" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video>
-            <div>
-                <h1 data-es="Bienvenidos al Club Social Royal Palm Sampaka" data-en="Welcome to Royal Palm Sampaka Social Club" data-fr="Bienvenue au Club Social Royal Palm Sampaka">Bienvenidos al Club Social Royal Palm Sampaka</h1>
-                <p data-es="Un lugar donde el lujo y la comunidad se encuentran." data-en="A place where luxury and community meet." data-fr="Un lieu où le luxe et la communauté se rencontrent.">Un lugar donde el lujo y la comunidad se encuentran.</p>
-            </div>
-        </section>
-        <div class="audio-player" id="audioPlayer">
-            <audio id="backgroundAudio" loop>
-                <source src="audio/background-music.mp3" type="audio/mpeg">
-                Tu navegador no soporta audio.
-            </audio>
-            <button onclick="document.getElementById('backgroundAudio').play()">Play</button>
-            <button onclick="document.getElementById('backgroundAudio').pause()">Pause</button>
+<?php include 'includes/header.php'; ?>
+<main>
+    <section class="hero-section animate__animated animate__fadeIn">
+        <video id="heroVideo" muted loop>
+            <source src="videos/videos.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <div>
+            <h1 data-es="Bienvenido al Club Social Royal Palm Sampaka" data-en="Welcome to Royal Palm Sampaka Social Club" data-fr="Bienvenue au Club Social Royal Palm Sampaka">Bienvenido al Club Social Royal Palm Sampaka</h1>
+            <p data-es="Disfruta de instalaciones exclusivas, eventos únicos y una experiencia inolvidable." data-en="Enjoy exclusive facilities, unique events, and an unforgettable experience." data-fr="Profitez d'installations exclusives, d'événements uniques et d'une expérience inoubliable.">Disfruta de instalaciones exclusivas, eventos únicos y una experiencia inolvidable.</p>
+            <button class="cta-button" onclick="location.href='reservas.php'">Reservar Ahora</button>
         </div>
-        <section class="features-section">
-            <div class="feature-card animate__animated animate__fadeIn">
-                <img src="imagenes/piscina.png" alt="Piscina">
-                <h3 data-es="Piscina" data-en="Pool" data-fr="Piscine">Piscina</h3>
-                <p data-es="Relájate en nuestra piscina de lujo." data-en="Relax in our luxury pool." data-fr="Détendez-vous dans notre piscine de luxe.">Relájate en nuestra piscina de lujo.</p>
-            </div>
-            <div class="feature-card animate__animated animate__fadeIn">
-                <img src="imagenes/novedad3.jpg" alt="Eventos">
-                <h3 data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</h3>
-                <p data-es="Celebra momentos especiales con nosotros." data-en="Celebrate special moments with us." data-fr="Célébrez des moments spéciaux avec nous.">Celebra momentos especiales con nosotros.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Placeholder for footer content (originally from includes/footer.php) -->
-        <div class="footer-section">
-            <h3 data-es="Síguenos" data-en="Follow Us" data-fr="Suivez-nous">Síguenos</h3>
-            <p class="social-links">
-                <a href="https://wa.me/+240555797427" target="_blank" data-es="WhatsApp" data-en="WhatsApp" data-fr="WhatsApp">WhatsApp</a> |
-                <a href="https://www.instagram.com/royalpalmclubsocial" target="_blank" data-es="Instagram" data-en="Instagram" data-fr="Instagram">Instagram</a> |
-                <a href="https://x.com" target="_blank" data-es="X" data-en="X" data-fr="X">X</a>
-            </p>
-            <p data-es="© 2025 Royal Palm Sampaka. Todos los derechos reservados." data-en="© 2025 Royal Palm Sampaka. All rights reserved." data-fr="© 2025 Royal Palm Sampaka. Tous droits réservés.">© 2025 Royal Palm Sampaka. Todos los derechos reservados.</p>
+    </section>
+    <audio id="backgroundAudio" class="audio-player" loop>
+        <source src="audio/audio.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    <section class="features-section">
+        <div class="feature-card animate__animated animate__fadeIn">
+            <img src="imagenes/restaurante1.png" alt="Cafetería">
+            <h3 data-es="Cafetería y Restaurante" data-en="Cafeteria and Restaurant" data-fr="Cafétéria et Restaurant">Cafetería y Restaurante</h3>
+            <p data-es="Sabores auténticos en un ambiente acogedor." data-en="Authentic flavors in a cozy atmosphere." data-fr="Saveurs authentiques dans une ambiance chaleureuse.">Sabores auténticos en un ambiente acogedor.</p>
         </div>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.getElementById('heroVideo');
-            const audio = document.getElementById('backgroundAudio');
-            const audioPlayer = document.querySelector('.audio-player');
+        <div class="feature-card animate__animated animate__fadeIn">
+            <img src="imagenes/piscina.png" alt="Piscina">
+            <h3 data-es="Piscina" data-en="Pool" data-fr="Piscine">Piscina</h3>
+            <p data-es="Relájate en nuestra piscina de lujo." data-en="Relax in our luxury pool." data-fr="Détendez-vous dans notre piscine de luxe.">Relájate en nuestra piscina de lujo.</p>
+        </div>
+        <div class="feature-card animate__animated animate__fadeIn">
+            <img src="imagenes/novedad3.jpg" alt="Eventos">
+            <h3 data-es="Eventos" data-en="Events" data-fr="Événements">Eventos</h3>
+            <p data-es="Celebra momentos especiales con nosotros." data-en="Celebrate special moments with us." data-fr="Célébrez des moments spéciaux avec nous.">Celebra momentos especiales con nosotros.</p>
+        </div>
+    </section>
+</main>
+<?php include 'includes/footer.php'; ?>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('heroVideo');
+    const audio = document.getElementById('backgroundAudio');
+    const audioPlayer = document.querySelector('.audio-player');
 
-            // Promesas para esperar a que ambos elementos estén listos
-            const videoReady = new Promise(resolve => {
-                video.addEventListener('loadeddata', () => resolve());
-            });
-            const audioReady = new Promise(resolve => {
-                audio.addEventListener('loadeddata', () => resolve());
-            });
+    // Promesas para esperar a que ambos elementos estén listos
+    const videoReady = new Promise(resolve => {
+        video.addEventListener('loadeddata', () => resolve());
+    });
+    const audioReady = new Promise(resolve => {
+        audio.addEventListener('loadeddata', () => resolve());
+    });
 
-            // Cuando ambos estén listos, iniciar reproducción
-            Promise.all([videoReady, audioReady]).then(() => {
-                try {
-                    video.play();
-                    audio.play().then(() => {
-                        audioPlayer.classList.add('active');
-                    }).catch(e => {
-                        console.log('Autoplay bloqueado:', e);
-                        audioPlayer.style.display = 'block'; // Mostrar controles si autoplay falla
-                    });
-                } catch (e) {
-                    console.log('Error al iniciar reproducción:', e);
-                    audioPlayer.style.display = 'block';
-                }
+    // Cuando ambos estén listos, iniciar reproducción
+    Promise.all([videoReady, audioReady]).then(() => {
+        try {
+            video.play();
+            audio.play().then(() => {
+                audioPlayer.classList.add('active');
+            }).catch(e => {
+                console.log('Autoplay bloqueado:', e);
+                audioPlayer.style.display = 'block'; // Mostrar controles si autoplay falla
             });
+        } catch (e) {
+            console.log('Error al iniciar reproducción:', e);
+            audioPlayer.style.display = 'block';
+        }
+    });
 
-            // Sincronizar eventos de pausa/reproducción
-            video.addEventListener('pause', () => audio.pause());
-            video.addEventListener('play', () => {
-                if (audio.paused) {
-                    audio.play().catch(e => console.log('Error al reanudar audio:', e));
-                }
-            });
+    // Sincronizar eventos de pausa/reproducción
+    video.addEventListener('pause', () => audio.pause());
+    video.addEventListener('play', () => {
+        if (audio.paused) {
+            audio.play().catch(e => console.log('Error al reanudar audio:', e));
+        }
+    });
 
-            // Sincronizar el tiempo del audio con el video si se busca
-            video.addEventListener('seeked', () => {
-                audio.currentTime = video.currentTime;
-            });
-        });
-    </script>
+    // Sincronizar el tiempo del audio con el video si se busca
+    video.addEventListener('seeked', () => {
+        audio.currentTime = video.currentTime;
+    });
+});
+</script>
 </body>
 </html>
